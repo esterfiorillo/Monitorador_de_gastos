@@ -36,6 +36,7 @@
 **Backlog do Sprint**:
 
 (2):
+
     Definir arquitetura do sistema (como integrar partes) (todos)
     Criar interface de salvar transação  (Pedro e André)
     Criar banco de dados com tabelas especificando as transações (Ester)
@@ -44,6 +45,7 @@
     Tratar e filtrar os dados (Mateus)
 
 (4):
+
     Definir  tipo de visualização de dados (André, Pedro)
     Implementar visualização por gráfico (Pedro)
     Implementar visualização por tabela (André)
@@ -52,11 +54,13 @@
     Testar se dados do banco estão consistentes com o gráfico (Mateus)
     
 (3):
+
     Implementar interface de apagar (Pedro e André)
     Integrar front end com banco de dados com a transação a ser editada (Mateus)
     Fazer querie de edição do banco de dados (Ester)
 
 (5):
+
     Definir e implementar interface para variar o tipo de visualização (Pedro e André)
     Criar queries específicas para cada tipo de visualização (Ester)
     Integrar dados com a visualização desejada (Mateus)
