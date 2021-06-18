@@ -68,4 +68,23 @@
 
 Épico: 1, 6, 7
 
-commit teste
+**Intruções Frontend:**
+
+instale o vue,
+
+```
+npm install -g @vue/cli
+```
+
+prepare,
+
+```
+npm install
+```
+
+rode,
+
+```
+npm run serve
+```
+
