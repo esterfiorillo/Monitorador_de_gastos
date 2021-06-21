@@ -1,22 +1,21 @@
 <template>
   <zing-grid
     ref="myGrid"
-    caption="Detalhes das Transações"
     layout="row"
     pager
     page-size="5"
     page-size-options="5,10,20"
     control-bar="false"
     style="width: 100%;"
-    height="240px"
+    height="241px"
     theme="default"
     :data.prop="entries"
   >
     <zg-colgroup>
-      <zg-column index="timestamp" header="Data" type="date"></zg-column>
-      <zg-column index="descricao" header="Descrição" type="text"></zg-column>
-      <zg-column index="valor" header="Valor" type="currency" type-currency="BRL"></zg-column>
-      <zg-column index="categoria" header="Categoria" type="text"></zg-column>
+      <zg-column index="timestamp" header="Data" align="center" type="date"></zg-column>
+      <zg-column index="descricao" header="Descrição" align="center" type="text"></zg-column>
+      <zg-column index="valor" header="Valor" align="center" type="currency" type-currency="BRL"></zg-column>
+      <zg-column index="categoria" header="Categoria" align="center" type="text"></zg-column>
     </zg-colgroup>
   </zing-grid>
 </template>

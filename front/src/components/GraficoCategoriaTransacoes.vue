@@ -1,12 +1,15 @@
 <template>
-   <zingchart :data="chartConfig"  :height="'100%'"/> 
+   <zingchart :data="chartConfig" :theme="theme" :height="'100%'"/> 
 </template>
 
 <script>
+import theme from '../theme/theme.js';
+
 export default {
   props: ['entries'],
   data() {
     return {
+      theme
     };
   },
   computed: {
