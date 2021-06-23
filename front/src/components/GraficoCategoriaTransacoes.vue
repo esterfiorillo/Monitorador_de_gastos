@@ -9,19 +9,17 @@ export default {
   props: ['entries'],
   data() {
     return {
-      theme
+    theme
     };
   },
   computed: {
     acquisitionBreakdown() {
       const categories = this.entries.reduce((acc, transaction) => {
         if (transaction.categoria in acc){
-          // arrumar isto
-          // funcionando errado
-          acc[transaction.categoria] ++
+          acc[transaction.categoria] += parseFloat(transaction.valor);
         }
         else {
-          acc[transaction.categoria] = transaction.valor;
+          acc[transaction.categoria] = parseFloat(transaction.valor);
         }
 
         return acc;
