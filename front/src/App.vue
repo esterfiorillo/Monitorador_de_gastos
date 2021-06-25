@@ -1,20 +1,37 @@
 <template>
   <div id="app">
-    <section class="dashboard">
-      <section class="dashboard__summary">
-        <valor-total :values="transacoes" :start="range.start" :end="range.end"/>
-        <valor-total :values="transacoes" :start="range.start" :end="range.end"/>
-        <valor-total :values="transacoes" :start="range.start" :end="range.end"/>
-      </section>
-      <div class="dashboard__row">
-        <grafico-transacoes style="flex:2" :entries="transacoes" />
-        <grafico-categoria-transacoes  :entries="transacoes" />
-      </div>
-      <div class="dashboard__row">
-        <tabela-transacoes id="td-grid" :entries="transacoes" />
+    
+    <div class = "container">
+      <div class="logo-and-wordmark">
+        <div class="logo">
+          <img :src="require('./assets/images/logo.png')"/>
+        </div>
+        <div class="wordmark">
+          LOGO
+        </div>
+      </div>    
+
+      <div class = "search-form">
+
       </div>
 
-    </section>
+      <section class="dashboard">
+        <section class="dashboard__summary">
+          <valor-total :values="transacoes" :start="range.start" :end="range.end"/>
+          <valor-total :values="transacoes" :start="range.start" :end="range.end"/>
+          <valor-total :values="transacoes" :start="range.start" :end="range.end"/>
+        </section>
+        <div class="dashboard__row">
+          <grafico-transacoes style="flex:2" :entries="transacoes" />
+          <grafico-categoria-transacoes  :entries="transacoes" />
+        </div>
+        <div class="dashboard__row">
+          <tabela-transacoes id="td-grid" :entries="transacoes" />
+        </div>
+      </section>
+      
+    </div>
+
   </div>
 </template>
 
@@ -52,6 +69,8 @@ export default {
 <style>
 
 #app {
+  display: flex;
+  background-color: #5abbbd;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -59,7 +78,34 @@ export default {
   --light-blue: #2196f3;
 }
 
+.container {
+  padding-top: 156px;
+}
+
+.logo-and-wordmark {
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 48px;
+  display: flex;
+}
+
+.wordmark { /* TODO: Alinhar texto à parte de baixo da div*/
+  font-size: 85px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  margin: 10px;
+}
+
+.search-form {
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 2px;
+  position: relative;
+  width: 624px;
+}
+
 .dashboard {
+  padding-bottom: 38px;
   width: 100%;
 }
 
