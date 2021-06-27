@@ -11,7 +11,9 @@
         </div>
       </div>    
 
-      <div class = "search-form">
+      <div class = "transaction-form">
+        <input class="transaction-form__input" type="text" name="transaction" placeholder="Digite aqui sua transação">
+        <barra></barra>
 
       </div>
 
@@ -38,6 +40,8 @@
 <script>
 import transacoes from './data/transacoes_teste.js';
 
+import Barra from './components/Barra.vue'
+
 import GraficoTransacoes from './components/GraficoTransacoes.vue';
 import GraficoCategoriaTransacoes from './components/GraficoCategoriaTransacoes.vue';
 import TabelaTransacoes from './components/TabelaTransacoes.vue';
@@ -51,6 +55,7 @@ export default {
     GraficoCategoriaTransacoes,
     TabelaTransacoes,
     ValorTotal,
+    Barra,
   },
   data() {
     return {
@@ -85,23 +90,33 @@ export default {
 .logo-and-wordmark {
   align-items: center;
   justify-content: center;
-  margin-bottom: 48px;
+  margin-bottom: 30px;
   display: flex;
 }
 
 .wordmark { /* TODO: Alinhar texto à parte de baixo da div*/
-  font-size: 85px;
+  font-size: 75px;
   font-family: 'Roboto', sans-serif;
   color: white;
   margin: 10px;
 }
 
-.search-form {
+
+.transaction-form {
+  margin: auto;
+  margin-bottom: 40px;
   background-color: #fff;
-  margin: 0 auto;
+  width: 600px;
+  height: 44px;
   border-radius: 2px;
-  position: relative;
-  width: 624px;
+}
+
+.transaction-form__input {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: #7c7c7c;
 }
 
 .dashboard {
