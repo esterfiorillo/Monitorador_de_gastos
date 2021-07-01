@@ -4,7 +4,7 @@
     <div class = "container">
       <div class="logo-and-wordmark">
         <div class="logo">
-          <img :src="require('./assets/images/logo.png')"/>
+          <img class="logo-img" :src="require('./assets/images/logo.png')"/>
         </div>
         <div class="wordmark">
           LOGO
@@ -88,19 +88,19 @@ export default {
 }
 
 .logo-and-wordmark {
-  align-items: center;
   justify-content: center;
   margin-bottom: 30px;
   display: flex;
 }
 
-.wordmark { /* TODO: Alinhar texto à parte de baixo da div*/
-  font-size: 75px;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  margin: 10px;
+.logo {
+  display: flex;
+  margin-right: 10px;
 }
 
+.logo-img {
+  align-self: flex-end;
+}
 
 .transaction-form {
   margin: auto;
