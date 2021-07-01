@@ -11,11 +11,7 @@
         </div>
       </div>    
 
-      <div class = "transaction-form">
-        <input class="transaction-form__input" type="text" name="transaction" placeholder="Digite aqui sua transação">
-        <barra></barra>
-
-      </div>
+      <barra></barra>
 
       <section class="dashboard">
         <section class="dashboard__summary">
@@ -102,25 +98,12 @@ export default {
   align-self: flex-end;
 }
 
-.transaction-form {
-  margin: auto;
-  margin-bottom: 40px;
-  background-color: #fff;
-  width: 600px;
-  height: 44px;
-  border-radius: 2px;
 .wordmark { 
   align-self: flex-end;
   display: flex;
   justify-content: flex-end;
 }
 
-.transaction-form__input {
-  width: 100%;
-  height: 100%;
-  font-family: sans-serif;
-  font-size: 18px;
-  color: #7c7c7c;
 .wordmark-text {
   font-size: 75px;
   line-height: 52px;
