@@ -3,10 +3,7 @@
     <div class = "transaction-form">
         <input class="transaction-description" type="text" name="description" placeholder="Digite aqui sua transação">
         <input class="transaction-value" type="text" name="value" placeholder="Valor (R$)">
-        <select class="transaction-category" name="category"> 
-            <option value="geral">Geral</option>
-            <option value="outros">Outros</option>            
-        </select>
+        <input class="transaction-category" type="text" name="categoria" placeholder="Categoria">
       </div>
     </div>
 </template>
@@ -54,8 +51,6 @@ export default {
   font-family: sans-serif;
   font-size: 18px;
   color: #7c7c7c;
-  background: transparent;
-  border: none;
 }
 
 </style>
