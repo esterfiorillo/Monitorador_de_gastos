@@ -7,7 +7,7 @@
           <img class="logo-img" :src="require('./assets/images/logo.png')"/>
         </div>
         <div class="wordmark">
-          LOGO
+          <span class="wordmark-text">LOGO</span>
         </div>
       </div>    
 
@@ -109,6 +109,10 @@ export default {
   width: 600px;
   height: 44px;
   border-radius: 2px;
+.wordmark { 
+  align-self: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .transaction-form__input {
@@ -117,6 +121,12 @@ export default {
   font-family: sans-serif;
   font-size: 18px;
   color: #7c7c7c;
+.wordmark-text {
+  font-size: 75px;
+  line-height: 52px;
+  height: 52px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
 }
 
 .dashboard {
