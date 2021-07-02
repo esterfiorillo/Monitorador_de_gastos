@@ -79,8 +79,7 @@ export default {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  --light-blue: #2196f3;
+  color: white;
 }
 
 .container {
@@ -132,7 +131,7 @@ export default {
 .scorecard__value {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--light-blue);;
+  color: var(white);;
 }
 .scorecard__header {
   margin-top: 0.4rem;

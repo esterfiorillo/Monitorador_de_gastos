@@ -29,21 +29,51 @@ export default {
     chartConfig() {
       const colors = [
         {
-          backgroundColor: '#04A3F5',
+          backgroundColor: '#0080ab',
           hoverState: {
-            backgroundColor: '#45D6C4'
+            backgroundColor: '#0080ab'
           }
         },
         {
-          backgroundColor: '#98D1EE',
+          backgroundColor: '#00afd3',
           hoverState: {
-            backgroundColor: '#45D6C4'
+            backgroundColor: '#00afd3'
           }
         },
-                {
-          backgroundColor: '#295A73',
+        {
+          backgroundColor: '#25c3ff',
           hoverState: {
-            backgroundColor: '#45D6C4'
+            backgroundColor: '#25c3ff'
+          }
+        },
+        {
+          backgroundColor: '#099ad9',
+          hoverState: {
+            backgroundColor: '#099ad9'
+          }
+        },
+        {
+          backgroundColor: '#0080ab',
+          hoverState: {
+            backgroundColor: '#0080ab'
+          }
+        },
+        {
+          backgroundColor: '#00afd3',
+          hoverState: {
+            backgroundColor: '#00afd3'
+          }
+        },
+        {
+          backgroundColor: '#25c3ff',
+          hoverState: {
+            backgroundColor: '#25c3ff'
+          }
+        },
+        {
+          backgroundColor: '#099ad9',
+          hoverState: {
+            backgroundColor: '#099ad9'
           }
         },
       ]
