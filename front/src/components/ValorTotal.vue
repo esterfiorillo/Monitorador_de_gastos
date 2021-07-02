@@ -103,11 +103,11 @@ export default {
           rules: [
             {
               rule: "%v > 0",
-              "line-color": "#04A3F5"
+              "line-color": "#099ad9"
             },
             {
               rule: "%v < 0",
-              "line-color": "#295A73"
+              "line-color": "#099ad9"
             }
           ]
         },
@@ -117,7 +117,7 @@ export default {
         series: [
           {
             values: this.accumulatedValues,
-            lineColor: "#04A3F5"
+            lineColor: "#099ad9"
           }
         ]
       };

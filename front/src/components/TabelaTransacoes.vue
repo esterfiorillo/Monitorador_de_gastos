@@ -8,7 +8,7 @@
     control-bar="false"
     style="width: 100%;"
     height="241px"
-    theme="default"
+    theme="Default"
     :data.prop="entries"
   >
     <zg-colgroup>
@@ -31,7 +31,7 @@ export default {
 
 zg-head-cell {
   background: white;
-  color: #5d7d9a;
+  color: #0080ab;
   font-size: 1rem;
 }
 
@@ -39,7 +39,7 @@ zg-control-bar {
   display: none;
 }
 zg-caption {
-color: #5d7d9a;
+color: #0080ab;
 font-family: "Avenir", Helvetica, Arial, sans-serif;
 font-weight: bold;
 background: white;

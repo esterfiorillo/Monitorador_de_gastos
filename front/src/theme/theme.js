@@ -1,5 +1,5 @@
 const text = {
-  primary: '#5D7D9A',
+  primary: '##02feff',
   secondary: '#6C6C6C',
 }
 const padding = {
@@ -13,7 +13,7 @@ export default {
   palette:{
     line: [
       //text,  line, node, ?
-      ['#FFFFFF', '#04A3F5', '#04A3F5', '#0276e3'],
+      ['#FFFFFF', '#25c3ff', '#25c3ff', '#25c3ff'],
       ['#FFFFFF', '#98D1EE', '#98D1EE', '#77aee9'],
       ['#FFFFFF', '#295A73', '#295A73', '#295A73'],
       ['#FFFFFF', '#5DD6FC', '#5DD6FC', '#5DD6FC'],
@@ -38,16 +38,7 @@ export default {
       ['#FFFFFF', '#98c1de', '#98c1de', '#156EAF'],
       ['#FFFFFF', '#aedaf2', '#aedaf2', '#45D6C4'],
     ],
-    pie: [
-      ['#FFFFFF', '#afecfe', '#afecfe', '#afecfe'],
-      ['#FFFFFF', '#7ddefd', '#7ddefd', '#7ddefd'],
-      ['#FFFFFF', '#36b6f8', '#36b6f8', '#36b6f8'],
-      ['#FFFFFF', '#3290be', '#3290be', '#3290be'],
-      ['#FFFFFF', '#5ca5ca', '#5ca5ca', '#5ca5ca'],
-      ['#FFFFFF', '#a0bed6', '#a0bed6', '#a0bed6'],
-      ['#FFFFFF', '#98c1de', '#98c1de', '#98c1de'],
-      ['#FFFFFF', '#aedaf2', '#aedaf2', '#45D6C4'],
-    ],
+    
     scatter: [
       ['#FFFFFF', '#afecfe', '#afecfe', '#afecfe'],
       ['#FFFFFF', '#7ddefd', '#7ddefd', '#7ddefd'],
@@ -142,7 +133,7 @@ export default {
       },
       scaleLabel: {
         fontColor: '#fff',
-        backgroundColor: '#5D7D9A',
+        backgroundColor: '#0080ab',
         borderRadius: 3,
         borderColor: '#EEE',
       }
