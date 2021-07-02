@@ -112,6 +112,7 @@ export default {
             }
           ]
         },
+        
         tooltip: {
           visible: false
         },

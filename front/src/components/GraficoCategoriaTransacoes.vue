@@ -92,7 +92,13 @@ export default {
           },
           hoverState: {
          	  borderWidth: 2,
-          }
+          },
+          animation: {
+            effect: 3,
+            speed: 1,
+            method: 4,
+            sequence: 2,
+          },
         },
         series: Object.keys(this.acquisitionBreakdown).map((type, index) => {
           return Object.assign(

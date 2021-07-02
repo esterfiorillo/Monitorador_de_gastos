@@ -24,6 +24,9 @@
 export default {
   props: ['entries'],
   mounted() {
+    this.$refs.myGrid.addEventListener('record:mouseover', (e) => {
+      this.$emit('mouseover', e);
+    });
   }
 }
 </script>

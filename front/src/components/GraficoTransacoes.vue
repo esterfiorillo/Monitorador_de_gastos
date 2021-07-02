@@ -32,6 +32,9 @@ export default {
           marker: {
             visible: false,
           },
+          animation: {
+              effect: "ANIMATION_SLIDE_LEFT",
+          },
 
         },
         crosshairX:{
