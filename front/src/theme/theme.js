@@ -1,5 +1,5 @@
 const text = {
-  primary: '##02feff',
+  primary: '#02feff',
   secondary: '#6C6C6C',
 }
 const padding = {

@@ -40,7 +40,7 @@ zg-control-bar {
 }
 zg-caption {
 color: #0080ab;
-font-family: "Avenir", Helvetica, Arial, sans-serif;
+font-family: "Roboto";
 font-weight: bold;
 background: white;
 padding-left: 0;

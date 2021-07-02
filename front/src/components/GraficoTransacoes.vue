@@ -41,7 +41,7 @@ export default {
             'thousands-separator': ","
           },
           marker: {
-            visible: false,
+            visible: true,
           }
         },
         tooltip: { 

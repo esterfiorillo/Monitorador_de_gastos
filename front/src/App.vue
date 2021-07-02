@@ -7,7 +7,7 @@
           <img class="logo-img" :src="require('./assets/images/logo.png')"/>
         </div>
         <div class="wordmark">
-          <span class="wordmark-text">LOGO</span>
+          <span class="wordmark-text">MONI</span>
         </div>
       </div>    
 
@@ -15,10 +15,11 @@
 
       <section class="dashboard">
         <section class="dashboard__summary">
-          <valor-total :values="transacoes" :start="range.start" :end="range.end"/>
-          <valor-total :values="transacoes" :start="range.start" :end="range.end"/>
-          <valor-total :values="transacoes" :start="range.start" :end="range.end"/>
+          <gasto-mensal :values="transacoes" :start="range.start" :end="range.end"/>
+          <gasto-mensal :values="transacoes" :start="range.start" :end="range.end"/>
+          <gasto-mensal :values="transacoes" :start="range.start" :end="range.end"/>
         </section>
+        <br>
         <div class="dashboard__row">
           <grafico-transacoes style="flex:2" :entries="transacoes" />
           <grafico-categoria-transacoes  :entries="transacoes" />
@@ -41,7 +42,7 @@ import Barra from './components/Barra.vue'
 import GraficoTransacoes from './components/GraficoTransacoes.vue';
 import GraficoCategoriaTransacoes from './components/GraficoCategoriaTransacoes.vue';
 import TabelaTransacoes from './components/TabelaTransacoes.vue';
-import ValorTotal from './components/ValorTotal.vue';
+import GastoMensal from './components/GastoMensal.vue';
 
 export default {
   name: 'app',
@@ -50,7 +51,7 @@ export default {
     GraficoTransacoes,
     GraficoCategoriaTransacoes,
     TabelaTransacoes,
-    ValorTotal,
+    GastoMensal,
     Barra,
   },
   data() {
@@ -69,10 +70,13 @@ export default {
 
 <style>
 
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
 #app {
   display: flex;
   background-color: #5abbbd;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Roboto";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: white;
@@ -107,7 +111,7 @@ export default {
   font-size: 75px;
   line-height: 52px;
   height: 52px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Goldman';
   color: white;
 }
 
@@ -120,10 +124,12 @@ export default {
   display: flex;
   justify-content: space-around;
   margin: 0.5rem 0;
+  font-family: 'Roboto';
 }
 .scorecard__value {
   font-size: 1.5rem;
   font-weight: 700;
+  font-family: 'Roboto';
   color: var(white);;
 }
 .scorecard__header {

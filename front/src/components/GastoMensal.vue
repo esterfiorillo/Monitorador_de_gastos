@@ -8,8 +8,9 @@
       :height="50"
       @guide_mousemove="changeValue"
     />
+    <br>
     <div class="scorecard__value">{{currentValue}}</div>
-    <div class="scorecard__header">Gastos Totais</div>
+    <div class="scorecard__header">Gasto Mensal</div>
   </div>
 </template>
 
@@ -86,7 +87,7 @@ export default {
           alpha: 0,
           marker: {
             visible: true,
-            size: 5
+            size: 6
           },
           plotLabel: {
             alpha: 0
@@ -96,10 +97,10 @@ export default {
           }
         },
         plotarea: {
-          margin: "15px"
+          margin: "7px"
         },
         plot: {
-          lineWidth: 3,
+          lineWidth: 4,
           rules: [
             {
               rule: "%v > 0",
