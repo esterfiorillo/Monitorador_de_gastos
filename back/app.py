@@ -70,21 +70,22 @@ def remove_book(book_id):
 
 
 @app.route('/send_transacoes/<transaction_id>', methods=['PUT', 'DELETE'])
-def single_book(book_id):
+def single_book(id):
     response_object = {'status': 'success'}
     if request.method == 'PUT':
         post_data = request.get_json()
-        remove_book(book_id)
+        remove_book(id)
         data.append({
             'id': uuid.uuid4().hex,
-            'title': post_data.get('title'),
-            'author': post_data.get('author'),
-            'read': post_data.get('read')
+            'time_stamp': post_data.get('time_stamp'),
+            'descricao': post_data.get('descricao'),
+            'valor': post_data.get('valor'),
+            'categoria': post_data.get('categoria')
         })
-        response_object['message'] = 'Book updated!'
+        response_object['message'] = 'Transação atualizada!'
     if request.method == 'DELETE':
-        remove_book(book_id)
-        response_object['message'] = 'Book removed!'
+        remove_book(id)
+        response_object['message'] = 'Transação removida!'
     return jsonify(response_object)
     
 
