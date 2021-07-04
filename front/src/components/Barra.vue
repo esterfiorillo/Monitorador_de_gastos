@@ -1,17 +1,23 @@
 <template>
     <div class="transaction-bar">
-    <div class = "transaction-form">
+    <form class = "transaction-form" method="post" v-bind:action="postUrl">
         <input class="transaction-description" type="text" name="description" placeholder="Digite aqui sua transação">
         <input class="transaction-category" type="text" name="categoria" placeholder="Categoria">
-        <input class="transaction-value" type="text" name="value" placeholder="Valor (R$)">
-        <button class="button button1"> Adicionar </button>
-      </div>
+        <input id="__value" class="transaction-value" type="text" name="value" placeholder="Valor (R$)">
+        <button type="button" class="button button1"> Adicionar </button>
+      </form>
     </div>
 </template>
 
 <script>
+
 export default {
-    
+    props: {
+      postUrl: {
+        type: String,
+        required: true,
+      }
+    },
 }
 </script>
 

@@ -11,7 +11,7 @@
         </div>
       </div>    
 
-      <barra></barra>
+      <barra v-bind:postUrl="postUrl"></barra>
 
       <section class="dashboard">
         <section class="dashboard__summary">
@@ -62,7 +62,8 @@ export default {
       range: {
         start: new Date(2021, 5, 1), 
         end: new Date(2021, 6, 1) 
-      }
+      },
+      postUrl: "http://localhost:8080/post_transacoes"
     }
   },
    methods: {
