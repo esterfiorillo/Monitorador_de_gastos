@@ -30,7 +30,7 @@ export default {
         plot: {
           aspect: 'spline',
           marker: {
-            visible: false,
+            visible: true,
           },
           animation: {
               effect: "ANIMATION_SLIDE_LEFT",

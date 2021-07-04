@@ -43,6 +43,7 @@ import GraficoTransacoes from './components/GraficoTransacoes.vue';
 import GraficoCategoriaTransacoes from './components/GraficoCategoriaTransacoes.vue';
 import TabelaTransacoes from './components/TabelaTransacoes.vue';
 import GastoMensal from './components/GastoMensal.vue';
+import axios from 'axios';
 
 export default {
   name: 'app',
@@ -57,14 +58,29 @@ export default {
   data() {
     return {
       transacoes,
+      // transacoes: '',
       range: {
         start: new Date(2021, 5, 1), 
         end: new Date(2021, 6, 1) 
       }
     }
   },
-  mounted() {
-  }
+   methods: {
+    getMessage() {
+      const path = 'http://localhost:8080/send_transacoes';
+      axios.get(path)
+        .then((res) => {
+          this.msg = res.data;
+        })
+        .catch((error) => {
+          // eslint-disable-next-line
+          console.error(error);
+        });
+    },
+  },
+  created() {
+    this.getMessage();
+  },
 }
 </script>
 

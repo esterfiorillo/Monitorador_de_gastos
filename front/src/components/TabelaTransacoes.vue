@@ -14,8 +14,8 @@
     <zg-colgroup>
       <zg-column index="timestamp" header="Data" align="center" type="date"></zg-column>
       <zg-column index="descricao" header="Descrição" align="center" type="text"></zg-column>
-      <zg-column index="valor" header="Valor" align="center" type="currency" type-currency="BRL"></zg-column>
       <zg-column index="categoria" header="Categoria" align="center" type="text"></zg-column>
+      <zg-column index="valor" header="Valor" align="center" type="currency" type-currency="BRL"></zg-column>
     </zg-colgroup>
   </zing-grid>
 </template>
@@ -23,11 +23,6 @@
 <script>
 export default {
   props: ['entries'],
-  mounted() {
-    this.$refs.myGrid.addEventListener('record:mouseover', (e) => {
-      this.$emit('mouseover', e);
-    });
-  }
 }
 </script>
 <style>
