@@ -48,7 +48,7 @@ import axios from 'axios';
 export default {
   name: 'app',
   components: {
-
+    
     GraficoTransacoes,
     GraficoCategoriaTransacoes,
     TabelaTransacoes,
@@ -70,7 +70,7 @@ export default {
       const path = 'http://localhost:8080/send_transacoes';
       axios.get(path)
         .then((res) => {
-          this.msg = res.data;
+          this.transacoes = res.data;
         })
         .catch((error) => {
           // eslint-disable-next-line
