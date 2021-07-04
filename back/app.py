@@ -2,6 +2,9 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from sqlite import creat_db, write_json
 import json
+import uuid
+from uuid import UUID
+from uuid import uuid4
 
 
 # configuration
@@ -18,7 +21,7 @@ CORS(app, resources={r'/*': {'origins': '*'}})
 banco = creat_db()
 write_json(banco)
 
-f = open('books.json')
+# f = open('books.json')
   
 # data = json.load(f)
 
@@ -42,7 +45,31 @@ def all_books():
     return jsonify(response_object)
 
 
-@app.route('/send_transacoes/<book_id>', methods=['PUT'])
+# @app.route('/send_transacoes/<transaction_id>', methods=['PUT'])
+# def single_book(book_id):
+#     response_object = {'status': 'success'}
+#     if request.method == 'PUT':
+#         post_data = request.get_json()
+#         remove_book(book_id)
+#         data.append({
+#             'id': uuid.uuid4().hex,
+#             'title': post_data.get('title'),
+#             'author': post_data.get('author'),
+#             'read': post_data.get('read')
+#         })
+#         response_object['message'] = 'Book updated!'
+#     return jsonify(response_object)
+
+
+def remove_book(book_id):
+    for book in data:
+        if book['id'] == book_id:
+            data.remove(book)
+            return True
+    return False
+
+
+@app.route('/send_transacoes/<transaction_id>', methods=['PUT', 'DELETE'])
 def single_book(book_id):
     response_object = {'status': 'success'}
     if request.method == 'PUT':
@@ -55,17 +82,11 @@ def single_book(book_id):
             'read': post_data.get('read')
         })
         response_object['message'] = 'Book updated!'
-
-def remove_book(book_id):
-    for book in data:
-        if book['id'] == book_id:
-            data.remove(book)
-            return True
-    return False
-
-
-
+    if request.method == 'DELETE':
+        remove_book(book_id)
+        response_object['message'] = 'Book removed!'
     return jsonify(response_object)
+    
 
 
 
