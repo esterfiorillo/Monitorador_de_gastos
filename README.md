@@ -88,3 +88,6 @@ rode,
 npm run serve
 ```
 
+***Arquitetura do sistema***
+![Arquitetura](Monitorador_de_gastos.png)
+
