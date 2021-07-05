@@ -11,8 +11,8 @@
         </div>
       </div>    
 
-      <barra></barra>
-
+      <barra v-bind:postURL="postURL"></barra>
+ 
       <section class="dashboard">
         <section class="dashboard__summary">
           <gasto-mensal :values="transacoes" :start="range.start" :end="range.end"/>
@@ -45,10 +45,13 @@ import TabelaTransacoes from './components/TabelaTransacoes.vue';
 import GastoMensal from './components/GastoMensal.vue';
 import axios from 'axios';
 
+var date = new Date(), y = date.getFullYear(), m = date.getMonth();
+var firstDay = new Date(y, m-1, 0);
+var lastDay = new Date(y, m+1, date.getDay());
+
 export default {
   name: 'app',
   components: {
-    
     GraficoTransacoes,
     GraficoCategoriaTransacoes,
     TabelaTransacoes,
@@ -57,20 +60,21 @@ export default {
   },
   data() {
     return {
-      transacoes,
-      // transacoes: '',
+      //transacoes,
+      transacoes: [],
       range: {
-        start: new Date(2021, 5, 1), 
-        end: new Date(2021, 6, 1) 
-      }
+        start: firstDay, 
+        end: lastDay, 
+      },
+      postURL: 'http://localhost:5000/send_transacoes',
     }
   },
-   methods: {
+  methods: {
     getMessage() {
-      const path = 'http://localhost:8080/send_transacoes';
+      const path = 'http://localhost:5000/send_transacoes';
       axios.get(path)
         .then((res) => {
-          this.transacoes = res.data;
+          this.transacoes = res.data.data;
         })
         .catch((error) => {
           // eslint-disable-next-line

@@ -1,17 +1,50 @@
 <template>
     <div class="transaction-bar">
-    <div class = "transaction-form">
-        <input class="transaction-description" type="text" name="description" placeholder="Digite aqui sua transação">
-        <input class="transaction-category" type="text" name="categoria" placeholder="Categoria">
-        <input class="transaction-value" type="text" name="value" placeholder="Valor (R$)">
-        <button class="button button1"> Adicionar </button>
-      </div>
+    <form class = "transaction-form" method="post">
+        <input class="transaction-description" type="text" v-model="description" name="description" placeholder="Digite aqui sua transação">
+        <input class="transaction-category" type="text" v-model="category" name="categoria" placeholder="Categoria">
+        <input id="__value" class="transaction-value" type="text" v-model="value" name="value" placeholder="Valor (R$)">
+        <button type="button" @click="postMethod" class="button button1"> Adicionar </button>
+      </form>
     </div>
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
-    
+    props: {
+      postURL: {type: String},
+    },
+    methods: {
+      postData(data) {
+        console.log("Postando!")
+        axios.post(this.postURL, data)
+          .then(() => {
+            console.log("Postado!")
+            window.location.reload()
+          })
+          .catch((error) => {
+            console.log(error);
+            window.location.reload()
+          });
+      },
+
+      postMethod: function() {
+        if (this.descricao == "" || this.valor == "" || this.categoria == "")
+          return;
+
+        const payload = {
+          descricao: this.description,
+          valor: this.value,
+          categoria: this.category,
+          timestamp:  new Date().getTime()
+        }
+        console.log("Criando payload!")
+        console.log(payload)
+        this.postData(payload)
+      },
+    }
 }
 </script>
 

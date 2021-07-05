@@ -28,12 +28,13 @@ data = []
 def all_books():
 
     banco = creat_db()
-    response_object = {'status': 'success'}
+    response_object = {}
     if request.method == 'POST':
         post_data = request.get_json()
+        print(post_data)
         data.append({
             'id': uuid.uuid4().hex,
-            'time_stamp': post_data.get('time_stamp'),
+            'timestamp': post_data.get('timestamp'),
             'descricao': post_data.get('descricao'),
             'valor': post_data.get('valor'),
             'categoria': post_data.get('categoria')
