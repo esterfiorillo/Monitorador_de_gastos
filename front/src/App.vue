@@ -45,6 +45,10 @@ import TabelaTransacoes from './components/TabelaTransacoes.vue';
 import GastoMensal from './components/GastoMensal.vue';
 import axios from 'axios';
 
+var date = new Date(), y = date.getFullYear(), m = date.getMonth();
+var firstDay = new Date(y, m-1, 0);
+var lastDay = new Date(y, m+1, date.getDay());
+
 export default {
   name: 'app',
   components: {
@@ -59,8 +63,8 @@ export default {
       //transacoes,
       transacoes: [],
       range: {
-        start: new Date(2021, 5, 1), 
-        end: new Date(2021, 6, 1) 
+        start: firstDay, 
+        end: lastDay, 
       },
       postURL: 'http://localhost:5000/send_transacoes',
     }
