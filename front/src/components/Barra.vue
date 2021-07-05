@@ -22,10 +22,11 @@ export default {
         axios.post(this.postURL, data)
           .then(() => {
             console.log("Postado!")
+            window.location.reload()
           })
           .catch((error) => {
             console.log(error);
-            this.getMessage();
+            window.location.reload()
           });
       },
 
@@ -37,14 +38,11 @@ export default {
           descricao: this.description,
           valor: this.value,
           categoria: this.category,
-          time_stamp: new Date().getTime()
+          timestamp:  new Date().getTime()
         }
         console.log("Criando payload!")
         console.log(payload)
         this.postData(payload)
-        this.descricao.value = ""
-        this.valor.value = ""
-        this.categoria.value = ""
       },
     }
 }
